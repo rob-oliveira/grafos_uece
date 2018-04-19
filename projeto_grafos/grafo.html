@@ -1,0 +1,205 @@
+<DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="grafo.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://www.html5canvastutorials.com/libraries/kinetic-v4.0.5.js"></script>
+<script type="text/javascript" src="grafo.js"> </script>
+<title>Grafos</title>
+
+</head>
+
+<body>
+    <link rel="shortcut icon" href="qualquerNome.gif" type="image/gif" />
+	<h1 id="heading1">Editor de Grafos</h1>
+    	<p>
+    		Trabalho de grafos<hr/>
+            <table>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="newGraph()">
+                         Novo Grafo
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onAddVert(true)">
+                         adicionar Vertice
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onAddEdge()">
+                         adicionar Aresta
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onRmVert(true)">
+                         remover Vertice
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onRmEdge()">
+                         remover Aresta
+                    </div>
+                </td>
+            </table>
+        <table id = "tabela1">
+		    <td>
+                <div id="container"></div>
+            </td>
+            <td valign = top>
+                <table id = "algoritmos">
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Resetar cores
+                            </div>
+                        <td> Cofigurar Editor
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Adjacentes
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="setRadius()">
+                                 Raio
+                            </div>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onBreadth()">
+                                 Breadth Search
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 aresta
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onDeep()">
+                                 Deep Search
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Seta
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onTopSort()">
+                                 Top-Sort
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="setColor()">
+                                 Cor dos vertices
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onKruskal()">
+                                 MSP
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Cor das arestas
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onDijstra()">
+                                 Dijstra
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Cor do texto
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onBellman()">
+                                 Bellman-Ford
+                            </div>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Cor de destaque
+                            </div>
+                    </tr>
+                </table>
+            </td>
+            <tr>
+                <td>
+                    <div id = "exemplos"></div>
+                </td>
+            </tr>
+        </table>
+    	</p>
+
+    <h2 class = "autor">autor -> <a href="mailto:us.robson7@gmail.com">Francisco Robson Oliveira de Lima </a></br>
+                                 <a href="http://www.uece.br">Universidade Estadual do Ceara </a></br>
+                                 <a href="http://www.comp.uece.br/">Bachrelado em Ciencia da Computação</a>
+    </h2>
+</body>
+</html>	

@@ -1,0 +1,35 @@
+<DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="meusite.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://www.html5canvastutorials.com/libraries/kinetic-v4.0.5.js"></script>
+<script type="text/javascript" src="grafo.js"> </script>
+<title> Site do Robson</title>
+
+</head>
+
+<body>
+	<h1 id="heading1">Grafo 1</h1>
+    	<p>
+    		Trabalho de grafos...<hr/>
+    		<div class = "graph">
+    			alguma coisa
+    			<div class = "button unpressed"
+    				 onmousedown="this.className='button pressed'" 
+    				 onmouseup="this.className='button unpressed'" 
+                     onclick="draw_graph()">
+    				 Novo Grafo
+   				</div>
+
+                
+                outra coisa
+    		</div>
+		<div id="container" height="300" width="300">
+			asdfsdasdfasdf
+		</div>
+    	</p>
+</body>
+</html>	

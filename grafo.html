@@ -1,0 +1,141 @@
+<DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="grafo.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://www.html5canvastutorials.com/libraries/kinetic-v4.0.5.js"></script>
+<script type="text/javascript" src="grafo.js"> </script>
+<title> Site do Robson</title>
+
+</head>
+
+<body>
+	<h1 id="heading1">Editor de Grafos</h1>
+    	<p>
+    		Trabalho de grafos<hr/>
+            <table>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="newGraph()">
+                         Novo Grafo
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onAddVert(true)">
+                         add Vertice
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onAddEdge()">
+                         add Aresta
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onRmVert(true)">
+                         rmv Vertice
+                    </div>
+                </td>
+                <td>
+                    <div class = "button unpressed"
+                         onmousedown="this.className='button pressed'" 
+                         onmouseup="this.className='button unpressed'" 
+                         onclick="onRmEdge()">
+                         rmv Aresta
+                    </div>
+                </td>
+            </table>
+        <table id = "tabela1">
+		    <td>
+                <div id="container"></div>
+            </td>
+            <td valign = top>
+                <table id = "algoritmos">
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onAdj()">
+                                 Adjacentes
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onBreadth()">
+                                 Breadth Search
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onDeep()">
+                                 Deep Search
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onTopSort()">
+                                 Top-Sort
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onKruskal()">
+                                 MSP
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onDijstra()">
+                                 Dijstra
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "button unpressed"
+                                 onmousedown="this.className='button pressed'" 
+                                 onmouseup="this.className='button unpressed'" 
+                                 onclick="onBellman()">
+                                 Bellman-Ford
+                            </div>
+                    </tr>
+                </table>
+            </td>
+            <tr>
+                <td>
+                    <div id = "exemplos"></div>
+                </td>
+            </tr>
+        </table>
+    	</p>
+
+    <h2 class = "autor">autor -> Francisco Robson Oliveira de Lima </h2>
+</body>
+</html>	
